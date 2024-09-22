@@ -10,11 +10,11 @@
   <body>
     <section class="firstPart">
       <p>
-        <strong>1. Инапсуляция</strong>-скрывает логику работы класса внутри него
+        <strong class="inc">Инапсуляция</strong>-скрывает логику работы класса внутри него
         самого, предоставляя внешний доступ только в виде интерфейса.
       </p>
-      <div class="code">
-          <code style="white-space: pre;">
+      <div class="codeModal incModal">
+          <code>
             function Counter() {
                 let count = 0;
                 this.increment = function() {
@@ -35,11 +35,11 @@
           </code>
       </div>
       <p>
-        <strong>Наследование</strong>-создание нового класса на основе
+        <strong class="nas">Наследование</strong>-создание нового класса на основе
         родительского, который наследует все свойства и методы родителя
       </p>
-      <div class="code">
-          <code style="white-space: pre;">
+      <div class="codeModal nasModal">
+          <code>
             // Базовый класс Animal
             function Animal(name) {
               this.name = name;
@@ -67,14 +67,15 @@
             Ujil.eat(); // Вывод: Юджил ест
             
             // Лаем
-            Ujil.bark(); // Вывод: Юджил лает</code>
+            Ujil.bark(); // Вывод: Юджил лает
+        </code>
       </div>
       <p>
-        <strong>Полиморфизм</strong>-Одинаковые интерфейсы скрывают за собой
+        <strong class="pol">Полиморфизм</strong>-Одинаковые интерфейсы скрывают за собой
         разную реализацию
       </p>
-      <div class="code">
-          <code style="white-space: pre;">
+      <div class="codeModal polModal">
+          <code>
             function makeSound(animal) {
                 animal.sound();
               }
@@ -92,18 +93,21 @@
               };
               
               makeSound(Ujil); // Output: The Ujil barks
-              makeSound(Bomba); // Output: The Bomba meows</code>
+              makeSound(Bomba); // Output: The Bomba meows
+            </code>
       </div>
     </section>
 <section class="second">
-    <strong>2. Командой git reset или через пользовательский интерфейс в GitLens</strong>
+    <strong>Командой git reset или через пользовательский интерфейс в GitLens</strong>
 </section>
 <section class="third">
-    <strong>3.</strong>
-    <input type="text" class="chekPoly" placeholder="напишите строку"/> 
-    <button class="chek">Проверить</button> 
+    <strong></strong>
+    <form>
+    <input required type="text" class="chekPoly" placeholder="напишите строку"/> 
+    <button disabled type="submit" class="chek">Проверить</button> 
+</form>
 </section>
-<div class="code"><code style="white-space: pre;">
+<div class="codeModal code"><code>
             function palindromeChecker(str) {
             str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
             const lastIndex = str.length - 1;
@@ -113,9 +117,10 @@
             }
              }
             return true;
-                }</code></div>
+                }
+            </code></div>
 <section class="fourth">
-    <h1>4. <a target="_blank" href="https://docs.google.com/document/d/1IqHeAHlERYDFTzrcsv0nWjg4X27VfuSe1HQJTcKK_Tw/edit?usp=sharing">Moe резюме</a></h1>
+    <strong><a target="_blank" href="https://docs.google.com/document/d/1IqHeAHlERYDFTzrcsv0nWjg4X27VfuSe1HQJTcKK_Tw/edit?usp=sharing">Moe резюме</a></strong>
 </section>
 <script src="script.js"></script>
   </body>
