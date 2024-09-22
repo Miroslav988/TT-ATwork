@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link href="normalize.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TT-AtWork</title>
+  </head>
+  <body>
+    <section class="firstPart">
+      <p>
+        <strong>1. Инапсуляция</strong>-скрывает логику работы класса внутри него
+        самого, предоставляя внешний доступ только в виде интерфейса.
+      </p>
+      <div class="code">
+          <code style="white-space: pre;">
+            function Counter() {
+                let count = 0;
+                this.increment = function() {
+                  count++;
+                };
+                this.getCount = function() {
+                  return count;
+                };
+              }
+              
+              let counter = new Counter();
+              
+              // Увеличиваем счетчик
+              counter.increment();
+              
+              // Получаем значение счетчика
+              console.log(counter.getCount()); // Вывод: 1
+          </code>
+      </div>
+      <p>
+        <strong>Наследование</strong>-создание нового класса на основе
+        родительского, который наследует все свойства и методы родителя
+      </p>
+      <div class="code">
+          <code style="white-space: pre;">
+            // Базовый класс Animal
+            function Animal(name) {
+              this.name = name;
+            }
+            
+            Animal.prototype.eat = function() {
+              console.log(`${this.name} ест`);
+            };
+            
+            // Класс Ujil, наследующий от Animal
+            function Ujil(name) {
+              Animal.call(this, name);
+            }
+            
+            Ujil.prototype = Object.create(Animal.prototype);
+            
+            Ujil.prototype.bark = function() {
+              console.log(`${this.name} лает`);
+            };
+            
+            // Создаем новый объект Ujil
+            let Ujil = new Ujil("Юджил");
+            
+            // Едим
+            Ujil.eat(); // Вывод: Юджил ест
+            
+            // Лаем
+            Ujil.bark(); // Вывод: Юджил лает</code>
+      </div>
+      <p>
+        <strong>Полиморфизм</strong>-Одинаковые интерфейсы скрывают за собой
+        разную реализацию
+      </p>
+      <div class="code">
+          <code style="white-space: pre;">
+            function makeSound(animal) {
+                animal.sound();
+              }
+              
+              let Ujil = {
+                sound: function() {
+                  console.log("The Ujil barks");
+                }
+              };
+              
+              let Bomba = {
+                sound: function() {
+                  console.log("The Bomba meows");
+                }
+              };
+              
+              makeSound(Ujil); // Output: The Ujil barks
+              makeSound(Bomba); // Output: The Bomba meows</code>
+      </div>
+    </section>
+<section class="second">
+    <strong>2. Командой git reset или через пользовательский интерфейс в GitLens</strong>
+</section>
+<section class="third">
+    <strong>3.</strong>
+    <input type="text" class="chekPoly" placeholder="напишите строку"/> 
+    <button class="chek">Проверить</button> 
+</section>
+<div class="code"><code style="white-space: pre;">
+            function palindromeChecker(str) {
+            str = str.toLowerCase().replace(/[^а-яa-z1-9]/gi, '');
+            const lastIndex = str.length - 1;
+            for (let i = 0; i < str.length / 2; i++) {
+            if (str[i] !== str[lastIndex - i]) {
+            return false;
+            }
+             }
+            return true;
+                }</code></div>
+<section class="fourth">
+    <h1>4. <a target="_blank" href="https://docs.google.com/document/d/1IqHeAHlERYDFTzrcsv0nWjg4X27VfuSe1HQJTcKK_Tw/edit?usp=sharing">Moe резюме</a></h1>
+</section>
+<script src="script.js"></script>
+  </body>
+</html>

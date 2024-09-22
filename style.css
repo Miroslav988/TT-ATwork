@@ -1,0 +1,22 @@
+body{
+    margin: 20px 15px;
+    font-size: 18px;
+}
+.code{
+    display: flex;
+    background-color: rgb(197, 197, 197);
+}
+.third{
+    display: flex;
+    justify-self: center;
+    align-items: baseline;
+}
+.chekPoly{
+    margin-left: 30px;
+    width: 50%;
+    margin-right: 15px;
+}
+section{
+margin-top: 30px;
+margin-bottom: 30px;
+}
